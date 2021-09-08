@@ -12,3 +12,4 @@ navbar:
     - icon: fa fa-github
       href: https://github.com/miarothberg
 output: distill::distill_article
+theme: "theme.css"

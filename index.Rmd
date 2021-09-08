@@ -1,8 +1,10 @@
 ---
 title: "Mia Rothberg"
+image: "profile_photo_circle.png"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  A portfolio of data science projects in R.
 site: distill::distill_website
+preview: "profile_photo_circle.png"
 ---
 
 ```{r setup, include=FALSE}
@@ -13,8 +15,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-![](profile_photo.JPG)
+![](profile_photo_circle.png)
 
 ## About me: 
 
-FILL IN HERE
+I'm a senior at Macalester College in St. Paul, Minnesota but I hail from Takoma Park, Maryland. I'm completing an Environmental Studies major with an emphasis in International Environment and Development and a minor in Statistics.  
