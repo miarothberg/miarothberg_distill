@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/2021-09-08-first-post/",
+    "title": "first post",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-08",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-08T08:23:56-05:00",
+    "input_file": {}
+  }
+]
