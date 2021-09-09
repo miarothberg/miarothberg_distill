@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-![](profile_photo_circle.png)
+![](profile_photo_circle.png){height=25%, width = 25%}
 
 ## About me: 
 
