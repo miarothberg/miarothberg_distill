@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-09-21-tidy-tuesday-september-21/",
+    "title": "Tidy Tuesday September 21",
+    "description": "Tidy Tuesday from the week of September 21 using historical Emmy's data.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-21",
+    "categories": [],
+    "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(lubridate)     # for date manipulation\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(sjmisc)\nlibrary(scales)\n\n\n\n\n\n# Read in the data for the week\nnominees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-21/nominees.csv')\n\n\n\n\n\nnominees_edited <- nominees %>% \n  mutate(short_category = str_sub(category, 1, 21)) %>% \n  filter(short_category == \"Outstanding Directing\") %>% \n  filter(distributor == \"Netflix\" | distributor == \"Hulu\" | distributor == \"Prime Video\") %>% \n  group_by(year, distributor) %>% \n  count()\n\n\n\n\n\nnominees_edited %>% \n  ggplot(aes(x = year, y = n, color = reorder(distributor,n))) +\n  geom_line() +\n  theme_bw() +\n  labs(title = \"Emmy Nominations and Wins for Outstanding Directing in All Genres\",\n      subtitle = \"For 3 Top Streaming Services\",\n       y = \"Count\",\n       x = \"\",\n      color = \"\") +\n  scale_color_manual(values = c(\"green\", \"cornflowerblue\", \"red\")) +\n  guides(color = guide_legend(reverse=TRUE)) +\n  scale_x_continuous(breaks= pretty_breaks())\n\n\n\n\nFor this week’s Tidy Tuesday, I looked at the “Outstanding Director” Emmy nominations and wins for three top streaming services over time, Netflix, Prime Video, and Hulu. As expected, Netflix has been much more dominant than the other two, reaching a maximum of 14 nominations in 2020, but the comparitive value of this information will increase as the other services grow. I chose to color each service based on the coloring in its logo, making the legend necessary only to those who are unfamiliar with them.\n\n\n\n",
+    "preview": "posts/2021-09-21-tidy-tuesday-september-21/tidy-tuesday-september-21_files/figure-html5/graph-1.png",
+    "last_modified": "2021-09-21T10:53:50-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-09-08-first-post/",
     "title": "first post",
     "description": "A short description of the post.",
