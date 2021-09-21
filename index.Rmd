@@ -1,10 +1,8 @@
 ---
 title: "Mia Rothberg"
-image: "profile_photo_circle.png"
 description: |
   A portfolio of data science projects in R.
 site: distill::distill_website
-preview: "profile_photo_circle.png"
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-![](profile_photo_circle.png){height=25%, width = 25%}
+<center>
+![](profile_photo_circle.png){width=25%}
+</center>
+
+
 
 ## About me: 
 

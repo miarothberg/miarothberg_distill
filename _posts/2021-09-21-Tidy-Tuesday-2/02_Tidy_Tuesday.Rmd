@@ -1,0 +1,64 @@
+---
+title: 'Tidy Tuesday #2'
+author: "Mia Rothberg"
+date: "September 21, 2021"
+output: 
+  html_document:
+    df_print: paged
+    code_download: true
+    code_folding: hide
+    theme: cerulean
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      error=TRUE, 
+                      message=FALSE, 
+                      warning=FALSE)
+```
+
+```{r libraries}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(sjmisc)
+library(scales)
+```
+
+```{r data}
+# Read in the data for the week
+nominees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-21/nominees.csv')
+
+```
+
+
+```{r data_cleaning}
+nominees_edited <- nominees %>% 
+  mutate(short_category = str_sub(category, 1, 21)) %>% 
+  filter(short_category == "Outstanding Directing") %>% 
+  filter(distributor == "Netflix" | distributor == "Hulu" | distributor == "Prime Video") %>% 
+  group_by(year, distributor) %>% 
+  count()
+```
+
+
+```{r graph}
+nominees_edited %>% 
+  ggplot(aes(x = year, y = n, color = reorder(distributor,n))) +
+  geom_line() +
+  theme_bw() +
+  labs(title = "Emmy Nominations and Wins for Outstanding Directing in All Genres",
+      subtitle = "For 3 Top Streaming Services",
+       y = "Count",
+       x = "",
+      color = "") +
+  scale_color_manual(values = c("green", "cornflowerblue", "red")) +
+  guides(color = guide_legend(reverse=TRUE)) +
+  scale_x_continuous(breaks= pretty_breaks())
+
+```
+
+> For this week's Tidy Tuesday, I looked at the "Outstanding Director" Emmy nominations and wins for three top streaming services over time, Netflix, Prime Video, and Hulu. As expected, Netflix has been much more dominant than the other two, reaching a maximum of 14 nominations in 2020, but the comparitive value of this information will increase as the other services grow. I chose to color each service based on the coloring in its logo, making the legend necessary only to those who are unfamiliar with them.
+
+
