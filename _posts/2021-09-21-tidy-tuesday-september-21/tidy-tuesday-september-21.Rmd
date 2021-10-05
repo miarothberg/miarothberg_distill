@@ -1,7 +1,7 @@
 ---
-title: "Tidy Tuesday September 21"
+title: "Tidy Tuesday 2: The Emmys"
 description: |
-  Tidy Tuesday from the week of September 21 using historical Emmy's data.
+  Tidy Tuesday from the week of September 21 using historical Emmys data.
 author:
   - name: Mia Rothberg
     url: {}

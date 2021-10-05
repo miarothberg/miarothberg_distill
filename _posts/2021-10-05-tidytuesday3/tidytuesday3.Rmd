@@ -1,0 +1,76 @@
+---
+title: "Tidy Tuesday 3: Registered Nurses"
+description: |
+  Tidy Tuesday from the week of October 5 using data on registered nurses and the ggmap package.
+author:
+  - name: Mia Rothberg
+    url: {}
+date: 10-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      error=TRUE, 
+                      message=FALSE, 
+                      warning=FALSE)
+```
+
+```{r libraries}
+library(tidyverse)     # for graphing and data cleaning
+library(ggthemes)      # for even more plotting themes
+library(scales)
+library(plotly)
+library(ggmap)
+library(tmaptools)
+library(maps)
+```
+
+```{r data}
+# Read in the data for the week
+nurses <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-05/nurses.csv')
+
+population <- read.csv("tidy-tues-nst-est2020.csv")
+
+```
+
+```{r}
+population <- population %>%
+  filter(STATE > 0) %>% 
+  filter(STATE < 57) %>% 
+  select(NAME, POPESTIMATE2010, POPESTIMATE2020)
+```
+
+```{r}
+nurses_joined <- nurses %>% 
+  left_join(population, by = c("State" = "NAME"))
+```
+
+```{r}
+nurses_2019_2020 <- nurses_joined %>% 
+  filter(Year == 2010 | Year == 2020) %>% 
+  mutate(std_registered_per_1000 = ifelse(Year == 2010, `Total Employed RN`/POPESTIMATE2010 * 1000, `Total Employed RN`/POPESTIMATE2020 * 1000)) %>% 
+  mutate(`Registered Nurses per 1000 People` = std_registered_per_1000) %>% 
+  mutate(state_lower = tolower(State))
+```
+
+```{r}
+states_map <- map_data("state")
+
+nurses_map <- nurses_2019_2020 %>% 
+  filter(Year == 2020) %>% 
+  ggplot(aes(fill = std_registered_per_1000, label = State, label2 = `Registered Nurses per 1000 People`, label3 = `Annual Salary Median`)) +
+  geom_map(aes(map_id = state_lower), color="gray", size=0.3, map = states_map) +
+  #geom_point(aes(x=Latitude.1, y=Latitude, size=`Annual Salary Median`), alpha = 0.5, fill = "black")+
+  expand_limits(x = states_map$long, y = states_map$lat) + 
+  theme_map() +
+  scale_fill_gradient(low="white", high = "navy") +
+  labs(fill = "Registered Nurses per 1000 People in 2020")
+
+ggplotly(nurses_map, tooltip = c("label", "label2", "label3"))
+```
+
+> For this Tidy Tuesday, I looked at the geospatial relationship of number of registered nurses per 1000 people in a state. I decided to add animation via `ggplotly` to display the state name, the exact number of nurses, and the median annual salary of nurses in that state. I was surprised to see that South Dakota had the most nurses per population, perhaps because it has the lowest population.
