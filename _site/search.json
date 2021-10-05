@@ -5,7 +5,7 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-09-15T13:37:08-05:00"
+      "last_modified": "2021-10-05T11:10:09-05:00"
     },
     {
       "path": "index.html",
@@ -13,7 +13,7 @@
       "description": "A portfolio of data science projects in R.\n",
       "author": [],
       "contents": "\n\n\nAbout me:\nI’m a senior at Macalester College in St. Paul, Minnesota but I hail from Takoma Park, Maryland. I’m completing an Environmental Studies major with an emphasis in International Environment and Development and a minor in Statistics.\n\n\n\n",
-      "last_modified": "2021-09-15T13:37:10-05:00"
+      "last_modified": "2021-10-05T11:10:11-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

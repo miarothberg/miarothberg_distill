@@ -1,8 +1,25 @@
 [
   {
+    "path": "posts/2021-10-05-tidytuesday3/",
+    "title": "Tidy Tuesday 3: Registered Nurses",
+    "description": "Tidy Tuesday from the week of October 5 using data on registered nurses and the ggmap package.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-05",
+    "categories": [],
+    "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(scales)\nlibrary(plotly)\nlibrary(ggmap)\nlibrary(tmaptools)\nlibrary(maps)\n\n\n\n\n\n# Read in the data for the week\nnurses <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-05/nurses.csv')\n\npopulation <- read.csv(\"tidy-tues-nst-est2020.csv\")\n\n\n\n\n\npopulation <- population %>%\n  filter(STATE > 0) %>% \n  filter(STATE < 57) %>% \n  select(NAME, POPESTIMATE2010, POPESTIMATE2020)\n\n\n\n\n\nnurses_joined <- nurses %>% \n  left_join(population, by = c(\"State\" = \"NAME\"))\n\n\n\n\n\nnurses_2019_2020 <- nurses_joined %>% \n  filter(Year == 2010 | Year == 2020) %>% \n  mutate(std_registered_per_1000 = ifelse(Year == 2010, `Total Employed RN`/POPESTIMATE2010 * 1000, `Total Employed RN`/POPESTIMATE2020 * 1000)) %>% \n  mutate(`Registered Nurses per 1000 People` = std_registered_per_1000) %>% \n  mutate(state_lower = tolower(State))\n\n\n\n\n\nstates_map <- map_data(\"state\")\n\nnurses_map <- nurses_2019_2020 %>% \n  filter(Year == 2020) %>% \n  ggplot(aes(fill = std_registered_per_1000, label = State, label2 = `Registered Nurses per 1000 People`, label3 = `Annual Salary Median`)) +\n  geom_map(aes(map_id = state_lower), color=\"gray\", size=0.3, map = states_map) +\n  expand_limits(x = states_map$long, y = states_map$lat) + \n  theme_map() +\n  scale_fill_gradient(low=\"white\", high = \"navy\") +\n  labs(fill = \"Registered Nurses per \\n1000 People in 2020\")\n\n#ggplotly(nurses_map, tooltip = c(\"label\", \"label2\", \"label3\"))\n\n\n\nplotly_map <- plotly::ggplotly(nurses_map, tooltip = c(\"label\", \"label2\", \"label3\"))\n\nhtmlwidgets::saveWidget(plotly_map, \"nurses_plotly_map.html\")\n\n\n\n\n\nprint( htmltools::tags$iframe(src=\"nurses_plotly_map.html\", width=600, height=480) )\n\n\n\n\n\n\nFor this Tidy Tuesday, I looked at the geospatial relationship of number of registered nurses per 1000 people in a state. I decided to add animation via ggplotly to display the state name, the exact number of nurses, and the median annual salary of nurses in that state. I was surprised to see that South Dakota had the most nurses per population, perhaps because it has the lowest population.\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-10-05T11:19:20-05:00",
+    "input_file": "tidytuesday3.knit.md"
+  },
+  {
     "path": "posts/2021-09-21-tidy-tuesday-september-21/",
-    "title": "Tidy Tuesday September 21",
-    "description": "Tidy Tuesday from the week of September 21 using historical Emmy's data.",
+    "title": "Tidy Tuesday 2: The Emmys",
+    "description": "Tidy Tuesday from the week of September 21 using historical Emmys data.",
     "author": [
       {
         "name": "Mia Rothberg",
@@ -13,24 +30,7 @@
     "categories": [],
     "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(lubridate)     # for date manipulation\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(sjmisc)\nlibrary(scales)\n\n\n\n\n\n# Read in the data for the week\nnominees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-21/nominees.csv')\n\n\n\n\n\nnominees_edited <- nominees %>% \n  mutate(short_category = str_sub(category, 1, 21)) %>% \n  filter(short_category == \"Outstanding Directing\") %>% \n  filter(distributor == \"Netflix\" | distributor == \"Hulu\" | distributor == \"Prime Video\") %>% \n  group_by(year, distributor) %>% \n  count()\n\n\n\n\n\nnominees_edited %>% \n  ggplot(aes(x = year, y = n, color = reorder(distributor,n))) +\n  geom_line() +\n  theme_bw() +\n  labs(title = \"Emmy Nominations and Wins for Outstanding Directing in All Genres\",\n      subtitle = \"For 3 Top Streaming Services\",\n       y = \"Count\",\n       x = \"\",\n      color = \"\") +\n  scale_color_manual(values = c(\"green\", \"cornflowerblue\", \"red\")) +\n  guides(color = guide_legend(reverse=TRUE)) +\n  scale_x_continuous(breaks= pretty_breaks())\n\n\n\n\nFor this week’s Tidy Tuesday, I looked at the “Outstanding Director” Emmy nominations and wins for three top streaming services over time, Netflix, Prime Video, and Hulu. As expected, Netflix has been much more dominant than the other two, reaching a maximum of 14 nominations in 2020, but the comparitive value of this information will increase as the other services grow. I chose to color each service based on the coloring in its logo, making the legend necessary only to those who are unfamiliar with them.\n\n\n\n",
     "preview": "posts/2021-09-21-tidy-tuesday-september-21/tidy-tuesday-september-21_files/figure-html5/graph-1.png",
-    "last_modified": "2021-09-21T10:53:50-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2021-09-08-first-post/",
-    "title": "first post",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Mia Rothberg",
-        "url": {}
-      }
-    ],
-    "date": "2021-09-08",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-09-08T08:23:56-05:00",
+    "last_modified": "2021-10-05T10:53:42-05:00",
     "input_file": {}
   }
 ]
