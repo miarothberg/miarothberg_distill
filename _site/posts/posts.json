@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-10-13-eddyfluxshiny/",
+    "title": "Eddyflux Shiny App",
+    "description": "My first Shiny App, created to showcase Harvard Forest data analyzed in my Big Data in Ecology class.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-13",
+    "categories": [],
+    "contents": "\nI created my first Shiny App to help me with work for two classes: Advanced Data Science and Big Data in Ecology. The data used is from an eddy flux tower in Harvard Forest, a major field site in the world of ecology. It has data on Net Ecoystem Exchange (NEE), Gross Ecosystem Exchange (GEE), respiration, radiation, and temperature at 27 m high (among many others) with measurements taken every 15 minutes starting in 1991.\nThis app showcases my use of user interaction, variable selection, and bootstrap themeing, and is available at https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-10-14T10:07:06-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-10-05-tidytuesday3/",
     "title": "Tidy Tuesday 3: Registered Nurses",
     "description": "Tidy Tuesday from the week of October 5 using data on registered nurses and the ggmap package.",
@@ -13,8 +30,8 @@
     "categories": [],
     "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(scales)\nlibrary(plotly)\nlibrary(ggmap)\nlibrary(tmaptools)\nlibrary(maps)\n\n\n\n\n\n# Read in the data for the week\nnurses <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-05/nurses.csv')\n\npopulation <- read.csv(\"tidy-tues-nst-est2020.csv\")\n\n\n\n\n\npopulation <- population %>%\n  filter(STATE > 0) %>% \n  filter(STATE < 57) %>% \n  select(NAME, POPESTIMATE2010, POPESTIMATE2020)\n\n\n\n\n\nnurses_joined <- nurses %>% \n  left_join(population, by = c(\"State\" = \"NAME\"))\n\n\n\n\n\nnurses_2019_2020 <- nurses_joined %>% \n  filter(Year == 2010 | Year == 2020) %>% \n  mutate(std_registered_per_1000 = ifelse(Year == 2010, `Total Employed RN`/POPESTIMATE2010 * 1000, `Total Employed RN`/POPESTIMATE2020 * 1000)) %>% \n  mutate(`Registered Nurses per 1000 People` = std_registered_per_1000) %>% \n  mutate(state_lower = tolower(State))\n\n\n\n\n\nstates_map <- map_data(\"state\")\n\nnurses_map <- nurses_2019_2020 %>% \n  filter(Year == 2020) %>% \n  ggplot(aes(fill = std_registered_per_1000, label = State, label2 = `Registered Nurses per 1000 People`, label3 = `Annual Salary Median`)) +\n  geom_map(aes(map_id = state_lower), color=\"gray\", size=0.3, map = states_map) +\n  expand_limits(x = states_map$long, y = states_map$lat) + \n  theme_map() +\n  scale_fill_gradient(low=\"white\", high = \"navy\") +\n  labs(fill = \"Registered Nurses per \\n1000 People in 2020\")\n\n#ggplotly(nurses_map, tooltip = c(\"label\", \"label2\", \"label3\"))\n\n\n\nplotly_map <- plotly::ggplotly(nurses_map, tooltip = c(\"label\", \"label2\", \"label3\"))\n\nhtmlwidgets::saveWidget(plotly_map, \"nurses_plotly_map.html\")\n\n\n\n\n\nprint( htmltools::tags$iframe(src=\"nurses_plotly_map.html\", width=600, height=480) )\n\n\n\n\n\n\nFor this Tidy Tuesday, I looked at the geospatial relationship of number of registered nurses per 1000 people in a state. I decided to add animation via ggplotly to display the state name, the exact number of nurses, and the median annual salary of nurses in that state. I was surprised to see that South Dakota had the most nurses per population, perhaps because it has the lowest population.\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-10-05T11:19:20-05:00",
-    "input_file": "tidytuesday3.knit.md"
+    "last_modified": "2021-10-05T11:19:21-05:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-09-21-tidy-tuesday-september-21/",

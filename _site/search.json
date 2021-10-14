@@ -5,15 +5,15 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-05T11:10:09-05:00"
+      "last_modified": "2021-10-14T10:07:27-05:00"
     },
     {
       "path": "index.html",
       "title": "Mia Rothberg",
       "description": "A portfolio of data science projects in R.\n",
       "author": [],
-      "contents": "\n\n\nAbout me:\nI’m a senior at Macalester College in St. Paul, Minnesota but I hail from Takoma Park, Maryland. I’m completing an Environmental Studies major with an emphasis in International Environment and Development and a minor in Statistics.\n\n\n\n",
-      "last_modified": "2021-10-05T11:10:11-05:00"
+      "contents": "\n\n\nAbout me:\nI’m a senior at Macalester College in St. Paul, Minnesota but I’m from Takoma Park, Maryland. I’m completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies.\n\n\n\n",
+      "last_modified": "2021-10-14T10:07:29-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
