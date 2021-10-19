@@ -1,0 +1,70 @@
+---
+title: "Tidy Tuesday 4: "
+description: |
+  Tidy Tuesday from the week of October 19
+author:
+  - name: Mia Rothberg
+    url: {}
+date: 10-19-2021
+output:
+  distill::distill_article:
+    self_contained: false
+  html_document:
+    df_print: paged
+    code_download: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      error=TRUE, 
+                      message=FALSE, 
+                      warning=FALSE)
+```
+
+```{r libraries}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(sjmisc)
+library(scales)
+```
+
+```{r data}
+# Read in the data for the week
+pumpkins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-19/pumpkins.csv')
+
+pumpkins <- pumpkins %>% 
+  separate(id, into = c("year", "class"), convert = TRUE) %>% 
+  mutate(place = as.numeric(place)) %>% 
+  mutate(grower_name = ifelse(grower_name == "Ellenbecker, Todd & Seqnoia", "Ellenbecker, Todd & Sequoia", grower_name))
+```
+
+```{r}
+pumpkins_50 <- pumpkins %>% 
+  filter(place <= 50) %>% 
+  group_by(grower_name, country) %>% 
+  summarize(number = n()) %>% 
+  arrange(desc(number)) %>% 
+  head(10)
+```
+
+```{r}
+pumpkins_50 %>% 
+  ggplot(aes(y = grower_name, x = number, fill = country)) +
+  geom_col() +
+  scale_fill_manual(values = c("red", "blue")) +
+  theme_minimal() +
+  theme(legend.title = element_blank(), 
+        panel.grid.major.y = element_blank(), # remove the vertical grid lines
+        panel.grid.minor.y = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        plot.title.position = "plot") +
+  scale_x_continuous(expand = c(0,0)) +
+  labs(x = "",
+       y = "",
+       title = "Growers with Most Pumpkins Ranked in the Top 50, 2013 to 2021, by Country")
+```
+
+> For this Tidy Tuesday, I analyzed the top growers of the pumpkins data. I removed both vertical and horizontal grid lines because they seemed extraneous for this graph. It wasn't surprising that only two countries were represented in these top 10 growers, but there were many other countries represented in the broader dataset.
