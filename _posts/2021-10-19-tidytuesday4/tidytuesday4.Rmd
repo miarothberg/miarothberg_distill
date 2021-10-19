@@ -1,5 +1,5 @@
 ---
-title: "Tidy Tuesday 4: "
+title: "Tidy Tuesday 4: Pumpkins "
 description: |
   Tidy Tuesday from the week of October 19 using pumpkin data.
 author:
