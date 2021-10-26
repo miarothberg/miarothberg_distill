@@ -26,6 +26,7 @@ library(lubridate)     # for date manipulation
 library(ggthemes)      # for even more plotting themes
 library(sjmisc)
 library(scales)
+library(ggThemeAssist)
 ```
 
 ```{r}
@@ -50,9 +51,11 @@ ultra_rankings_grand %>%
   theme_minimal() +
   labs(x = "",
        y = "Mean Speed (kph)",
-       title = "Speed in Relationship to Age and Gender in the 2019 P'tiot Sparnatrail Race") +
+       title = "Speed in Relationship to Age and Gender in the 2019 P'tiot Sparnatrail Race",
+       caption = "Plot by Mia Rothberg") +
   theme(plot.title.position = "plot",
         legend.position = "none")
+
 ```
 
 > This graph shows the men in the P'tiot Sparnatrail Race peaking at the age of 30, while the women are fastest at the age of 37. The women have a secondary peak at the age of 26 but are not consistently fast between then and 37, while the men are consistently fastest in their 20s. I chose to use stereotypical colors for the two genders in order to eliminate the need for a legend.
