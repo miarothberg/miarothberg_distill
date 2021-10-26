@@ -1,5 +1,39 @@
 [
   {
+    "path": "posts/2021-10-26-tidytuesday5/",
+    "title": "Tidy Tuesday 5: Ultramarathons",
+    "description": "An analysis of speed, gender, and age in the 2019 P'tiot Sparnatrail in Epernay, France.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-26",
+    "categories": [],
+    "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(lubridate)     # for date manipulation\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(sjmisc)\nlibrary(scales)\n\n\n\n\n\nrace <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')\nultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')\n\n\n\n\n\nultra_rankings_grand <- ultra_rankings %>% \n  filter(race_year_id == 54013) %>% \n  filter(!is.na(gender)) %>%\n  mutate(time = hms(time)) %>% \n  mutate(time_h = hour(time) + minute(time)/60 + second(time)/360) %>% \n  mutate(kph = 33.3/time_h) %>% \n  group_by(age, gender) %>% \n  summarize(mean_kph = mean(kph))\n\nultra_rankings_grand %>% \n  ggplot(aes(x = age, y = mean_kph, color = gender)) +\n  geom_line() +\n  scale_color_manual(values = c(\"blue\", \"hotpink\")) +\n  theme_minimal() +\n  labs(x = \"\",\n       y = \"Mean Speed (kph)\",\n       title = \"Speed in Relationship to Age and Gender in the 2019 P'tiot Sparnatrail Race\") +\n  theme(plot.title.position = \"plot\",\n        legend.position = \"none\")\n\n\n\n\n\nThis graph shows the men in the P’tiot Sparnatrail Race peaking at the age of 30, while the women are fastest at the age of 37. The women have a secondary peak at the age of 26 but are not consistently fast between then and 37, while the men are consistently fastest in their 20s. I chose to use stereotypical colors for the two genders in order to eliminate the need for a legend.\n\n\n\n\n",
+    "preview": "posts/2021-10-26-tidytuesday5/tidytuesday5_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2021-10-26T10:30:19-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-10-19-tidytuesday4/",
+    "title": "Tidy Tuesday 4: Pumpkins ",
+    "description": "Tidy Tuesday from the week of October 19 using pumpkin data.",
+    "author": [
+      {
+        "name": "Mia Rothberg",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-19",
+    "categories": [],
+    "contents": "\n\n\nlibrary(tidyverse)     # for graphing and data cleaning\nlibrary(lubridate)     # for date manipulation\nlibrary(ggthemes)      # for even more plotting themes\nlibrary(sjmisc)\nlibrary(scales)\n\n\n\n\n\n# Read in the data for the week\npumpkins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-19/pumpkins.csv')\n\npumpkins <- pumpkins %>% \n  separate(id, into = c(\"year\", \"class\"), convert = TRUE) %>% \n  mutate(place = as.numeric(place)) %>% \n  mutate(grower_name = ifelse(grower_name == \"Ellenbecker, Todd & Seqnoia\", \"Ellenbecker, Todd & Sequoia\", grower_name))\n\n\n\n\n\npumpkins_50 <- pumpkins %>% \n  filter(place <= 50) %>% \n  group_by(grower_name, country) %>% \n  summarize(number = n()) %>% \n  arrange(desc(number)) %>% \n  head(10)\n\n\n\n\n\npumpkins_50 %>% \n  ggplot(aes(y = grower_name, x = number, fill = country)) +\n  geom_col() +\n  scale_fill_manual(values = c(\"red\", \"blue\")) +\n  theme_minimal() +\n  theme(legend.title = element_blank(), \n        panel.grid.major.y = element_blank(), # remove the vertical grid lines\n        panel.grid.minor.y = element_blank(),\n        panel.grid.major.x = element_blank(),\n        panel.grid.minor.x = element_blank(),\n        plot.title.position = \"plot\") +\n  scale_x_continuous(expand = c(0,0)) +\n  labs(x = \"\",\n       y = \"\",\n       title = \"Growers with Most Pumpkins Ranked in the Top 50, 2013 to 2021, by Country\")\n\n\n\n\n\nFor this Tidy Tuesday, I analyzed the top growers of the pumpkins data. I removed both vertical and horizontal grid lines because they seemed extraneous for this graph. It wasn’t surprising that only two countries were represented in these top 10 growers, but there were many other countries represented in the broader dataset.\n\n\n\n\n",
+    "preview": "posts/2021-10-19-tidytuesday4/tidytuesday4_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2021-10-19T13:45:29-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-10-13-eddyfluxshiny/",
     "title": "Eddyflux Shiny App",
     "description": "My first Shiny App, created to showcase Harvard Forest data analyzed in my Big Data in Ecology class.",

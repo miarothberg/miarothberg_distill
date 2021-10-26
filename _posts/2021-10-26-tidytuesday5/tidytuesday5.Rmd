@@ -1,0 +1,58 @@
+---
+title: "Tidy Tuesday 5: Ultramarathons"
+description: |
+  An analysis of speed, gender, and age in the 2019 P'tiot Sparnatrail in Epernay, France.
+author:
+  - name: Mia Rothberg
+    url: {}
+date: 10-26-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      error=TRUE, 
+                      message=FALSE, 
+                      warning=FALSE)
+```
+
+
+```{r libraries}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(sjmisc)
+library(scales)
+```
+
+```{r}
+race <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')
+ultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')
+```
+
+```{r}
+ultra_rankings_grand <- ultra_rankings %>% 
+  filter(race_year_id == 54013) %>% 
+  filter(!is.na(gender)) %>%
+  mutate(time = hms(time)) %>% 
+  mutate(time_h = hour(time) + minute(time)/60 + second(time)/360) %>% 
+  mutate(kph = 33.3/time_h) %>% 
+  group_by(age, gender) %>% 
+  summarize(mean_kph = mean(kph))
+
+ultra_rankings_grand %>% 
+  ggplot(aes(x = age, y = mean_kph, color = gender)) +
+  geom_line() +
+  scale_color_manual(values = c("blue", "hotpink")) +
+  theme_minimal() +
+  labs(x = "",
+       y = "Mean Speed (kph)",
+       title = "Speed in Relationship to Age and Gender in the 2019 P'tiot Sparnatrail Race") +
+  theme(plot.title.position = "plot",
+        legend.position = "none")
+```
+
+> This graph shows the men in the P'tiot Sparnatrail Race peaking at the age of 30, while the women are fastest at the age of 37. The women have a secondary peak at the age of 26 but are not consistently fast between then and 37, while the men are consistently fastest in their 20s. I chose to use stereotypical colors for the two genders in order to eliminate the need for a legend.
