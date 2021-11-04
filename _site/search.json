@@ -2,18 +2,25 @@
   "articles": [
     {
       "path": "blog.html",
-      "title": "Blog",
+      "title": "Data Visualizations",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-26T10:47:18-05:00"
+      "last_modified": "2021-11-04T08:47:04-05:00"
     },
     {
       "path": "index.html",
       "title": "Mia Rothberg",
-      "description": "A portfolio of data science projects in R.\n",
+      "description": "This website is in progress as I add coursework through the Fall 2021 semester. I will remove this message when it is completely updated.\n",
       "author": [],
-      "contents": "\n\n\nAbout me:\nI’m a senior at Macalester College in St. Paul, Minnesota but I’m from Takoma Park, Maryland. I’m completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies.\n\n\n\n",
-      "last_modified": "2021-10-26T10:47:20-05:00"
+      "contents": "\n\n\nAbout me:\nI’m a senior at Macalester College in St. Paul, Minnesota but I’m originally from Takoma Park, Maryland. I’m completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies.\nThis website was created through the distill package in R. Learn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+      "last_modified": "2021-11-04T08:54:26-05:00"
+    },
+    {
+      "path": "leadership.html",
+      "title": "Leadership",
+      "author": [],
+      "contents": "\nMacalester Jewish Organization (MJO)\nI joined the Macalester Jewish Organization my sophomore year and became a co-president my junior year. I was raised only culturally Jewish, but I was drawn to MJO by the well-organzed, strong community. As a co-president, I run our leadership meetings, help to organize hundred person services for the High Holidays, and plan weekly programming including cultural meetings and Shabbats. MJO is the only source of Jewish life on campus, so our programming is essential for religious students.\nChallah for Hunger\nI became involved with Challah for Hunger through MJO, and restarted Macalester’s chapter of the national organization my senior year after it took a pause during COVID. As president, I organized fundraising approval and arranged teams of volunteers three multi-part bake sales a semester. One team would mix ingredients for challah, the second would braid mini challahs after it rose, and the third would sell each challah for $1 during lunch the following day. We raised about $400 in the Fall 2021 semester, increasing our fundraising by more than 400% over Fall 2019. Half of the proceeds were donated to the national organization Swipe Out Hunger and half were donated to Macalester’s Little Free Pantry.\nCampus Hunger Project Cohort\nEach year, Challah for Hunger national organizes a cohort of students from colleges around the country to participate in the Campus Hunger Project. As cohort fellows, we each spearhead a project on our own campus to combat food insecurity with the support of other members. For my project, I’m mentoring an underclassman and working to establish a chapter of Swipe Out Hunger on Macalester’s campus, with the long term goal of creating a meal swipe donation program.\n\n\n\n",
+      "last_modified": "2021-11-04T08:47:08-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

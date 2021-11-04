@@ -1,0 +1,24 @@
+---
+title: "Lending/Loan Predictions Shiny App"
+description: |
+  My second shiny app, created as part of Assignment 5 in my Advanced Data Science class.
+author:
+  - name: Mia Rothberg
+    url: {}
+date: 11-04-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: shinyimage.png
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+For [this app](https://miarothberg.shinyapps.io/assignment_05_shiny/), I used the `lending_club` data available in the `modeldata` library, which is part of `tidymodels` to create a ceteris parabus profile for a predictive random forest model I built in Assignment 3. The app allows users to modify all of the predictive variables in the dataset to determine the model's prediction of the probability that the loan has been paid back fully or is currently on time.
+
+The app is available here: https://miarothberg.shinyapps.io/assignment_05_shiny/. The graph will look something like this: 
+
+![Ceteris Parabus](shinyimage.png)

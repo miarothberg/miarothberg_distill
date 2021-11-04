@@ -26,7 +26,6 @@ library(lubridate)     # for date manipulation
 library(ggthemes)      # for even more plotting themes
 library(sjmisc)
 library(scales)
-library(ggThemeAssist)
 ```
 
 ```{r}

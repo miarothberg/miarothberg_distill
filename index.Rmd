@@ -1,7 +1,7 @@
 ---
 title: "Mia Rothberg"
 description: |
-  A portfolio of data science projects in R.
+  This website is in progress as I add coursework through the Fall 2021 semester. I will remove this message when it is completely updated.
 site: distill::distill_website
 ---
 
@@ -21,4 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## About me: 
 
-I'm a senior at Macalester College in St. Paul, Minnesota but I'm from Takoma Park, Maryland. I'm completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies.  
+I'm a senior at Macalester College in St. Paul, Minnesota but I'm originally from Takoma Park, Maryland. I'm completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies. 
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+This website was created through the `distill` package in R. Learn more about using Distill at <https://rstudio.github.io/distill>.
+
