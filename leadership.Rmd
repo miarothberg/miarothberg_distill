@@ -1,5 +1,6 @@
 ---
 title: "Leadership"
+description: "A brief overview of my leadership experience since entering college."
 ---
 
 ```{r setup, include=FALSE}
@@ -9,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Macalester Jewish Organization (MJO)
 
-I joined the Macalester Jewish Organization my sophomore year and became a co-president my junior year. I was raised only culturally Jewish, but I was drawn to MJO by the well-organzed, strong community. As a co-president, I run our leadership meetings, help to organize hundred person services for the High Holidays, and plan weekly programming including cultural meetings and Shabbats. MJO is the only source of Jewish life on campus, so our programming is essential for religious students.
+I joined the Macalester Jewish Organization my sophomore year and became a co-president my junior year. I was raised only culturally Jewish, but I was drawn to MJO by the well-organized, strong community. As a co-president, I run our leadership meetings, help to organize hundred person services for the High Holidays, and plan weekly programming including cultural meetings and Shabbats. MJO is the only source of Jewish life on campus, so our programming is essential for religious students.
 
 
 ## Challah for Hunger

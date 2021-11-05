@@ -1,0 +1,30 @@
+---
+title: "Writing Samples"
+description: "A small collection of my writing since entering college."
+---
+
+
+## Communication with the Masses: The Future of Ecology
+
+I wrote [this op-ed](https://drive.google.com/file/d/1X06mo6MGdRh3VojJD5sdseMTokJoLlyl/view?usp=sharing) for my Ecology and the Environment class in Fall 2019 in response to the prompt "What should the future of ecology be?" In the paper, I argue that ecologists and scientists in general must place more of an effort on non-science communication in order to stay relevant. 
+
+
+
+## The American Empire: *The Global Interior* and the True International Role of the Department of the Interior
+
+I wrote [this 5 page paper](https://drive.google.com/file/d/1a81hKzkOyRTGjtp13xZt_fUCgc9_APKD/view?usp=sharing) in Spring 2021 for a class entitled Imperial Nature. It was in response to the prompt, "In giving her book a paradoxical title, *The Global Interior*, Megan Black highlights her central argument: that the Department of the Interior played a major role in projecting American power beyond its borders, initially in the context of settler-colonial expansion and later on a global scale, helping the US to push an imperial agenda that was at once plain for all to see, yet somehow also obscured from view. In a paper 4-6 pages in length that draws on evidence and examples from the book, assess the major strengths and weaknesses of the book. How did the Department of the Interior help the U.S. to build an empire hiding in plain sight?" This paper is both a literary analysis and a deconstruction of the traditional perception of the US Department of the Interior.
+
+
+
+## Planting the Seeds of Women in Agriculture
+
+I wrote [this 10 page paper](https://drive.google.com/file/d/1lNH4I6LY732nXsTnHhex_ld3eDKFkMZR/view?usp=sharing) in Fall 2018 for the class People, Agriculture, and the Environment. After visiting two farms near Osceola, Wisconsin, each student was assigned to focus on a different aspect of modern farming. I chose to focus my research on the importance of women in agriculture and how to get more women involved.
+
+
+
+## Building Blocks of Hate: Factors that influence hate crime rates in the United States
+
+I created [this StoryMap](https://storymaps.arcgis.com/stories/62aa5abc6be54189b7dc9216ddb07784) using ArcGIS Online in Spring 2020 for my Introduction to GIS and Cartography course. In it, I seek to answer two questions through geovisual and graphical analysis. The questions are: 
+
+* How does income inequality relate to hate crime rates in US states?
+* How do 2016 presidential election results relate to hate crime rates in US states?

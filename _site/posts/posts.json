@@ -11,10 +11,10 @@
     ],
     "date": "2021-11-04",
     "categories": [],
-    "contents": "\nFor this app, I used the lending_club data available in the modeldata library, which is part of tidymodels to create a ceteris parabus profile for a predictive random forest model I built in Assignment 3. The app allows users to modify all of the predictive variables in the dataset to determine the model’s prediction of the probability that the loan has been paid back fully or is currently on time.\nThe app is available here: https://miarothberg.shinyapps.io/assignment_05_shiny/. The graph will look something like this:\nCeteris ParabusThe code for this graph is available on my Github here: https://github.com/miarothberg/assignment_05_shiny\n\n\n\n",
+    "contents": "\nFor this app, I used the lending_club data available in the modeldata library, which is part of tidymodels to create a ceteris paribus profile for a predictive random forest model I built in Assignment 3. The app allows users to modify all of the predictive variables in the dataset to determine the model’s prediction of the probability that the loan has been paid back fully or is currently on time. Much of the code was borrowed from my professor, Lisa Lendway, but I built some of the input panel and did the themeing for the app.\nThe app is available here: https://miarothberg.shinyapps.io/assignment_05_shiny/. The graph will look something like this:\nCeteris ParabusThe code for this graph is available on my Github here: https://github.com/miarothberg/assignment_05_shiny.\n\n\n\n",
     "preview": "posts/2021-11-04-lendingshiny/shinyimage.png",
-    "last_modified": "2021-11-04T10:06:30-05:00",
-    "input_file": "lendingshiny.knit.md"
+    "last_modified": "2021-11-04T20:25:07-05:00",
+    "input_file": {}
   },
   {
     "path": "posts/2021-10-26-tidytuesday5/",

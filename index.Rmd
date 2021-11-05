@@ -25,5 +25,5 @@ I'm a senior at Macalester College in St. Paul, Minnesota but I'm originally fro
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-This website was created through the `distill` package in R. Learn more about using Distill at <https://rstudio.github.io/distill>.
+I created this website through the `distill` package in R. Learn more about using `distill` at <https://rstudio.github.io/distill>.
 

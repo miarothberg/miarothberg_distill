@@ -7,10 +7,14 @@ navbar:
   right:
     - text: "About"
       href: index.html
-    - text: "Data Visualizations"
-      href: blog.html
     - text: "Leadership"
       href: leadership.html
+    - text: "Portfolio"
+      menu:
+        - text: "Data Visualizations"
+          href: blog.html
+        - text: "Writing Samples"
+          href: writing_samples.html
     - icon: fa fa-github
       href: https://github.com/miarothberg
 output: distill::distill_article
