@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"NULL"}
+  {"type":"character","attributes":{},"value":["eddyflux_prev.png","eddyfluxshiny_files/anchor-4.2.2/anchor.min.js","eddyfluxshiny_files/bowser-1.9.3/bowser.min.js","eddyfluxshiny_files/distill-2.2.21/template.v2.js","eddyfluxshiny_files/header-attrs-2.10/header-attrs.js","eddyfluxshiny_files/jquery-1.11.3/jquery.min.js","eddyfluxshiny_files/popper-2.6.0/popper.min.js","eddyfluxshiny_files/tippy-6.2.7/tippy-bundle.umd.min.js","eddyfluxshiny_files/tippy-6.2.7/tippy-light-border.css","eddyfluxshiny_files/tippy-6.2.7/tippy.css","eddyfluxshiny_files/tippy-6.2.7/tippy.umd.min.js","eddyfluxshiny_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2385,7 +2385,18 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <div class="nav-right">
 <a href="../../index.html">About</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Portfolio
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
 <a href="../../blog.html">Data Visualizations</a>
+<a href="../../writing_samples.html">Writing Samples</a>
+</div>
+</div>
+<a href="../../Resume.pdf">Resume</a>
 <a href="../../leadership.html">Leadership</a>
 <a href="https://github.com/miarothberg">
 <i class="fa fa-github" aria-hidden="true"></i>
@@ -2413,7 +2424,10 @@ d-appendix d-footnote-list a.footnote-backlink {
 
 <div class="d-article">
 <p>I created my first <a href="https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/">Shiny App</a> to help me with work for two classes: Advanced Data Science and Big Data in Ecology. The data used is from an eddy flux tower in Harvard Forest, a major field site in the world of ecology. It has data on Net Ecoystem Exchange (NEE), Gross Ecosystem Exchange (GEE), respiration, radiation, and temperature at 27 m high (among many others) with measurements taken every 15 minutes starting in 1991.</p>
-<p>This app showcases my use of user interaction, variable selection, and bootstrap themeing, and is available at <a href="https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/">https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/</a>.</p>
+<p>This app showcases my use of user interaction, variable selection, and bootstrap themeing, and is available at <a href="https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/">https://miarothberg.shinyapps.io/assignment_04_10142021_shiny/</a>. When the page loads, the app looks like this:</p>
+<figure>
+<img src="eddyflux_prev.png" alt="Eddyflux" /><figcaption aria-hidden="true">Eddyflux</figcaption>
+</figure>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

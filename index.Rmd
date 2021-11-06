@@ -19,9 +19,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-## About me: 
+## Hi! 
 
-I'm a senior at Macalester College in St. Paul, Minnesota but I'm originally from Takoma Park, Maryland. I'm completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies. 
+I'm currently a senior at Macalester College in St. Paul, Minnesota completing an Environmental Studies major with an emphasis in International Environment and Development and minors in Statistics and Latin American Studies. 
+
+Before Macalester, I spent most of my life in Takoma Park, Maryland. I focused on cellular biology when I was in the STEM Magnet program at Montgomery Blair High School, but was most drawn to the more macro interactions that I could see when I was out hiking, biking, or running. Macalester has helped me to both hone and combine my interests, allowing me to learn about international environmental policy and history and to combine that with my interest in data.
+
+Feel free to explore the rest of this website to learn more, or contact me at mrothber@macalester.edu
 
 
 ----------------------------------------------------------------------------------------------------------------------------------

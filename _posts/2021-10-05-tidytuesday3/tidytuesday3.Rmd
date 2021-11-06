@@ -9,6 +9,7 @@ date: 10-05-2021
 output:
   distill::distill_article:
     self_contained: false
+preview: blog_prev_tt3.png
 ---
 
 
@@ -83,4 +84,4 @@ print( htmltools::tags$iframe(src="nurses_plotly_map.html", width=600, height=48
 ```
 
 
-> For this Tidy Tuesday, I looked at the geospatial relationship of number of registered nurses per 1000 people in a state. I decided to add animation via `ggplotly` to display the state name, the exact number of nurses, and the median annual salary of nurses in that state. I was surprised to see that South Dakota had the most nurses per population, perhaps because it has the lowest population.
+> For this Tidy Tuesday, I looked at the geospatial relationship of number of registered nurses per 1000 people in a state. I decided to add animation via `ggplotly` to make the map interactive and display the state name, the exact number of nurses, and the median annual salary of nurses in that state when you hover over it. I was surprised to see that South Dakota had the most nurses per population, perhaps because it has the lowest population.
