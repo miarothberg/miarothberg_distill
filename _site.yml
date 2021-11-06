@@ -13,7 +13,7 @@ navbar:
           href: blog.html
         - text: "Writing Samples"
           href: writing_samples.html
-    - text: "Resume"
+    - text: "CV"
       href: Resume.pdf
     - text: "Leadership"
       href: leadership.html
