@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ## Set-Up Code
 
-Click each arror to expand/collapse code.
+Click each arrow to expand/collapse code.
 
 ```{r warning=FALSE, message=FALSE}
 #load packages
