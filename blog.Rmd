@@ -1,4 +1,4 @@
 ---
-title: "Data Visualizations"
+title: "Data Visualizations: The following posts, and this entire website, were made using RStudio in a variety of the Statistics and Data Science courses I have taken at Macalester."
 listing: posts
 ---

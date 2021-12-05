@@ -1,7 +1,5 @@
 ---
 title: "Mia Rothberg"
-description: |
-  This website is in progress as I add coursework through the Fall 2021 semester. I will remove this message when it is completely updated.
 site: distill::distill_website
 ---
 

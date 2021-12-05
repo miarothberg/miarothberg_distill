@@ -10,13 +10,29 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Macalester Jewish Organization (MJO)
 
-I joined the Macalester Jewish Organization my sophomore year and became a co-president my junior year. I was raised only culturally Jewish, but I was drawn to MJO by the well-organized, strong community. As a co-president, I run our leadership meetings, help to organize hundred person services for the High Holidays, and plan weekly programming including cultural meetings and Shabbats. MJO is the only source of Jewish life on campus, so our programming is essential for religious students.
+I joined the Macalester Jewish Organization my sophomore year and became a co-president my junior year. I was raised only culturally Jewish, but I was drawn to MJO by the well-organized, strong community. As a co-president, I run our leadership meetings, help to organize hundred person services for the High Holidays, plan weekly programming including cultural meetings and Shabbats, and run our Instagram page. MJO is the only source of Jewish life on campus, so our programming is essential for religious students.
 
 
 ## Challah for Hunger
 
+::: {.floatting}
+
+```{r, echo = FALSE, out.width='30%', out.extra='style="float:left; padding:5px"'}
+knitr::include_graphics("https://images.squarespace-cdn.com/content/v1/5a0cb13ca803bbc10a2695e6/1583356674446-S96LZ1QC6YJVU1JTJWWQ/CFH+Logo.png?format=750w")
+```
+
 I became involved with [Challah for Hunger](https://challahforhunger.org/) through MJO, and restarted Macalester's chapter of the national organization my senior year after it took a pause during COVID. As president, I organized fundraising approval and arranged teams of volunteers for three multi-part bake sales a semester. One team would mix ingredients for challah, the second would braid mini challahs after it rose, and the third would sell each challah for \$1 during lunch the following day. We raised about \$400 in the Fall 2021 semester, increasing our fundraising by more than 400% over Fall 2019. Half of the proceeds were donated to the national organization Swipe Out Hunger and half were donated to Macalester's Little Free Pantry.
+
+:::
 
 ## Campus Hunger Project Cohort
 
+::: {.floatting}
+
+```{r, echo = FALSE, out.width='30%', out.extra='style="float:left; padding:5px"'}
+knitr::include_graphics("https://challahforhunger.org/wordcms/wp-content/uploads/2019/05/Campus-Hunger-Project-Logo-Final-01-1038x576.jpg")
+```
+
 Each year, Challah for Hunger national organizes a cohort of students from colleges around the country to participate in the [Campus Hunger Project](https://challahforhunger.org/campushungerproject/). As cohort fellows, we each spearhead a project on our own campus to combat food insecurity with the support of other members. For my project, I'm mentoring an underclassman and working to establish a chapter of [Swipe Out Hunger](https://www.swipehunger.org/) on Macalester's campus, with the long term goal of creating a meal swipe donation program.
+
+:::

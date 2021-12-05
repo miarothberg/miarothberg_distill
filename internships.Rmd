@@ -8,21 +8,39 @@ output:
 
 ## Forest Conservation Intern at the Montgomery County Planning Department
 
+::: {.floatting}
+
+```{r, echo = FALSE, out.width='50%', out.extra='style="float:left; padding:0px"'}
+knitr::include_graphics("https://montgomeryplanning.org/wp-content/uploads/2020/08/Reforest-Montgomery-weblogo.jpg")
+```
+
 I have been the forest conservation intern in the Intake and Regulatory Coordination division of the Montgomery County Planning Department since June 2020. The majority of my work has been focused on the department's [Reforest Montgomery](montgomeryplanning.org/reforest) program, an initiative to fund free or reduced price trees to county residents and parks through the [Forest Conservation Fund](https://montgomeryplanning.org/planning/environment/forest-conservation-and-trees/forest-conservation-fund/). Reforest Montgomery has five subprograms, and my roles in each have been as follows:
 
+:::
+ 
 * Native tree coupon program - this is our most widely used program, allowing anyone planting a tree in the county to purchase a tree for $40 off at a participating nursery. Coupons with information including address, tree species, and price are sent to the department for reimbursement, and I log each one into our internal ArcGIS Online database.
-* Free shade tree program - through this program, we organize contractors to plant about 100 trees per year on private properties in densely populated areas of the county. Anyone can apply, and I review and respond to each application. For accepted applications, usually requesting between 1 and 5 trees, I prepare a site map using ArcGIS Pro to assist my supervisor and our contractors when they conduct site visits and plant the trees. 
+* Free shade tree program - through this program, we organize contractors to plant about 100 trees per year on private properties in densely populated areas of the county. Anyone can apply, and I review and respond to each application. For accepted applications, usually requesting between 1 and 5 trees, I prepare a site map using ArcGIS Pro to assist my supervisor and our contractors when they conduct site visits and plant the trees. In my first months, I used Adobe Illustrator to design handouts with information on how to get involved in the program and each type of tree that we offer.
   * The first month of my internship, I used Adobe Illustrator to create handouts detailing the steps people need to take to participate in this program and the tree species they can choose from, both of which are available on the website.
 * Re-Leaf the Reserve - this program provides large-scale reforestation projects for property owners in Montgomery County's Agricultural Reserve. When I am in the area, I visit each site to photograph and inspect the plantings, and am working on creating a StoryMap through ArcGIS Online to document the growth.
 * Montgomery Parks Reforestation - this program partners with the Montgomery County Parks Department to fund both large-scale reforestation projects and large-caliper transplants in Montgomery County Parks. My role in this program is very similar to my role in Re-Leaf the Reserve.
 * Forest Conservation Easement Reforestation - this program is still in it's pilot phase, but will eventually assist homeowners anywhere in the county with a Category I Forest Conservation Easement with reforestation. In preparation for the launch of the program, I have conducted a site suitability analysis using ArcGIS Pro to identify ideal sites for reforestation and prepared site plans accordingly.
 
+For the program as a whole, I write a quarterly newsletter with information about our recent projects, respond to requests for data, and manage the program email account.
 
 ## Communities Intern at the Sustainable States Network
 
+::: {.floatting}
+
+```{r echo = FALSE, out.width='50%', out.extra='style="float:left; padding:15px"'}
+knitr::include_graphics("https://images.squarespace-cdn.com/content/v1/5c618f602727be3ec81d2285/1551794317427-J7K6FJY90TPBPALLQ956/EHTF-004_Collateral-16.jpg?format=1500w")
+```
+
 I spent the fall semester of my senior year at Macalester interning with the [Sustainable States Network](https://www.sustainablestates.net/), which is managed by the [Great Plains Institute](https://betterenergy.org/). The Sustainable States Network is a coalition of state-level organizations from 14 states around the country advocating for environmental causes. The majority of network members run programs in which municipalities in their state can receive an environmental "certification" for completing a certain number of actions, like establishing farmer's markets or community composting programs.
 
-My main job was designing the annual survey for Network members, asking questions about achievements, equity initiatives, and performance metrics, and distilling the information into Padlets (like [this one](https://greatplainsinstitute.padlet.org/kacuna3/i7jzkzbnw14d6xwl)) for them to present at the annual meeting near the end of my internship. 
+:::
+
+
+My main job was designing the annual survey for Network members, asking questions about achievements, equity initiatives, and performance metrics on SurveyMonkey, and distilling the information into Padlets (like [this one](https://greatplainsinstitute.padlet.org/kacuna3/i7jzkzbnw14d6xwl)) for them to present at the annual meeting near the end of my internship. 
 
 ## Research Intern in the Catholic University of America Biology Department
 
