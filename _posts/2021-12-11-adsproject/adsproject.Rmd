@@ -1,0 +1,29 @@
+---
+title: "Impacts of Environmental and Socioeconomic Factors on Health Outcomes in California"
+description: |
+  A project conducted in Fall 2021 demonstrating my use of LASSO, random forest, boosted decision tree, and stacked models.
+author:
+  - name: Mia Rothberg
+    url: {}
+date: 12-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In Fall 2021, I did two data-based courses: Advanced Data Science, where I learned to make this website and advanced modeling techniques, and Big Data in Ecology, which focused on environmental research. I chose to use the same topic for both classes' final projects. For the Data Science portion, I worked with my classmate Yunyang Zhong and Kate Seeger to create a dataset from a wide variety of sources and build and stack three different types of models for four health outcomes. For the Ecology portion, I recreated the models using only ecological variables to look at their importance and focus more on my science writing.
+
+The projects had three final products with significant overlap, each linked below:
+
+* [Big Data in Ecology final report](https://ecology-project.netlify.app/): no code, just the outcomes of each model and my analysis.
+* [Advanced Data Science public blog](https://public-ads-blog.netlify.app/): no code, explanations of what we did appropriate for someone with basic statistical knowledge.
+* [Advanced Data Science internal blog](https://internal-ads-blog.netlify.app/): all final code for the project, accessible to someone familiar with RStudio and `tidymodels`
+
+Finally, all of the data and code for this project is available for public use on [Yunyang's Github page](https://github.com/yzhong0620/Advanced-Data-Science-Project).
+
+
