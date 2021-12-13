@@ -7,6 +7,9 @@ description: "A brief overview of my leadership experience since entering colleg
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+<center>
+![](Sukkah.png){width=45%}
+</center>
 
 ## Macalester Jewish Organization (MJO)
 

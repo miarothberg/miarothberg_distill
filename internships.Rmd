@@ -6,11 +6,16 @@ output:
     toc_float: true
 ---
 
+
+<center>
+![](Reddy-Branch.png){width=45%}
+</center>
+
 ## Forest Conservation Intern at the Montgomery County Planning Department
 
 ::: {.floatting}
 
-```{r, echo = FALSE, out.width='50%', out.extra='style="float:left; padding:0px"'}
+```{r, echo = FALSE, out.width='30%', out.extra='style="float:left; padding:0px"'}
 knitr::include_graphics("https://montgomeryplanning.org/wp-content/uploads/2020/08/Reforest-Montgomery-weblogo.jpg")
 ```
 
@@ -31,7 +36,7 @@ For the program as a whole, I write a quarterly newsletter with information abou
 
 ::: {.floatting}
 
-```{r echo = FALSE, out.width='50%', out.extra='style="float:left; padding:15px"'}
+```{r echo = FALSE, out.width='30%', out.extra='style="float:left; padding:15px"'}
 knitr::include_graphics("https://images.squarespace-cdn.com/content/v1/5c618f602727be3ec81d2285/1551794317427-J7K6FJY90TPBPALLQ956/EHTF-004_Collateral-16.jpg?format=1500w")
 ```
 
@@ -44,7 +49,16 @@ My main job was designing the annual survey for Network members, asking question
 
 ## Research Intern in the Catholic University of America Biology Department
 
+::: {.floatting}
+
+```{r echo = FALSE, out.width='15%', out.extra='style="float:left; padding:15px"'}
+knitr::include_graphics("cualogo.png")
+```
+
 From June the summer before my senior year of high school until I graduated, I worked as a research intern in the lab of Dr. Pamela Tuma under the guidance of graduate student (current) Dr. Jennifer Groebner. While there, I assisted Dr. Groebner in her investigations of molecular mechanisms that lead to the progression of alcoholic liver disease. This internship initially started as a research project for my senior capstone but became a full year experience that lead to two published papers:
+
+
+:::
 
 * Groebner, J.L., Girón-Bravo, M.T., **Rothberg, M.L.**, Adhikari, R., Tuma, D.J., Tuma, P.L. “Alcohol-induced microtubule acetylation leads to the accumulation of large, immobile lipid droplets.” *American Journal of Physiology* (2019).
   * available [here](https://journals.physiology.org/doi/full/10.1152/ajpgi.00026.2019)
